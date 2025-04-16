@@ -1,9 +1,10 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import React, { useState } from 'react';
-import "./index.css";
+import { AnimatePresence } from 'framer-motion';
 
 import WelcomePage from "./pages/WelcomePage";
-import { AnimatePresence } from 'framer-motion';
+import Navbar from "./components/Navbar";
+import Home from "./sections/Home/Home.jsx";
 
 const LandingPage = ({ showWelcome, setShowWelcome }) => {
   return (
@@ -16,7 +17,8 @@ const LandingPage = ({ showWelcome, setShowWelcome }) => {
 
       {!showWelcome && (
         <>
-          <h1 className="text-center text-white mt-10">Mwah 😘</h1>
+          <Navbar />
+          <Home/>
         </>
       )}
     </>
@@ -29,7 +31,7 @@ function App() {
   const [showWelcome, setShowWelcome] = useState(true);
 
   return (
-    <BrowserRouter>
+    <BrowserRouter future={{ v7_startTransition: true }}>
       <Routes>
         <Route path="myportfolio/" element={<LandingPage showWelcome={showWelcome} setShowWelcome={setShowWelcome} />} />
       </Routes>
