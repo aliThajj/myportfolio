@@ -126,6 +126,6 @@ body {
   animation: shine 1.5s ease-in-out infinite;
 }
 
-.animate-pulse {
+/* .animate-pulse {
   animation: smooth-blink 1s step-end infinite;
-}
+} */

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X, ChevronLeft, ChevronRight } from "lucide-react";
-import logo from '../assets/images/ATH_logo_navbar2.png'
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
